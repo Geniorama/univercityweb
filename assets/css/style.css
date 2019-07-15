@@ -1,0 +1,134 @@
+/*General Styles*/
+h1, h2, h3, h4, h5 {
+  font-family: "Poppins", sans-serif;
+}
+
+p {
+  font-family: "Open Sans", sans-serif;
+}
+
+body {
+  width: 100%;
+  overflow-x: hidden;
+}
+
+body, html {
+  height: 100%;
+}
+
+/*Header*/
+.theme-header {
+  position: absolute;
+  width: 100%;
+  z-index: 3;
+  padding: 1vw 0;
+  transition: all 0.3s;
+}
+.theme-header .nav-link {
+  color: #fff;
+  font-family: "Poppins", sans-serif;
+  position: relative;
+  transition: all 0.3s;
+}
+.theme-header .nav-link::after {
+  content: "";
+  height: 0;
+  width: 2px;
+  background-color: #af384a;
+  position: absolute;
+  left: 0;
+  transition: all 0.3s;
+}
+.theme-header .nav-link:hover {
+  color: #af384a;
+}
+.theme-header .nav-link:hover::after, .theme-header .nav-link.active::after {
+  height: 60%;
+}
+.theme-header .nav-link.active {
+  color: #af384a;
+}
+.theme-header .container-toggle {
+  padding: 0 !important;
+  margin: 0 !important;
+}
+.theme-header .toggle-button {
+  background-color: transparent !important;
+  border: none;
+  font-size: 2vw;
+  color: #fff;
+  text-align: right;
+}
+.theme-header .container-nav {
+  display: none;
+}
+
+.header-selected {
+  background-color: rgba(255, 255, 255, 0.9);
+  color: #000;
+}
+.header-selected .nav-link {
+  color: #000;
+}
+.header-selected .toggle-button {
+  color: #000;
+}
+
+/*Sections*/
+.intro {
+  height: 100%;
+  background-color: #ccc;
+  width: 100%;
+}
+.intro .section-intro {
+  width: 50%;
+  height: 100%;
+  position: relative;
+  color: #fff;
+  text-decoration: none;
+  transition: all 0.3s;
+  overflow: hidden;
+}
+.intro .section-intro .img-bg {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: all 0.3s;
+  position: relative;
+  z-index: 0;
+}
+.intro .section-intro .caption {
+  position: absolute;
+  z-index: 2;
+}
+.intro .section-intro::before {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.7);
+  top: 0;
+  left: 0;
+  transition: all 0.3s;
+  z-index: 1;
+}
+.intro .section-intro h2 {
+  position: relative;
+}
+.intro .section-intro:hover .img-bg {
+  transform: scale(1.1);
+}
+.intro .section-intro:hover::before {
+  background-color: rgba(0, 0, 0, 0.3);
+}
+
+/*Footer*/
+.theme-footer {
+  background-color: #000;
+}
+.theme-footer .nav-link {
+  color: #fff;
+  font-size: 1.5vw;
+}
+
+/*# sourceMappingURL=style.css.map */
